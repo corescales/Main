@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/theme/ThemeToggle";
 
 const nav = [
   { to: "/solutions", label: "Solutions" },
@@ -18,11 +19,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-emerald-400 text-white shadow-sm">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-              <path fill="currentColor" d="M12 2l3.5 6h-7L12 2zm0 20l-3.5-6h7L12 22zM2 12l6-3.5v7L2 12zm20 0l-6 3.5v-7L22 12z" />
-            </svg>
-          </span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2F649e3190b5f54c1da388cbe822f4adf7?format=webp&width=128"
+            alt="corescales logo"
+            className="h-8 w-8 rounded-sm object-contain"
+            loading="eager"
+            decoding="async"
+          />
           <span className="text-lg font-extrabold tracking-tight">corescales</span>
         </Link>
 
@@ -44,6 +47,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <Link to="/contact" className="text-sm font-medium text-foreground/70 hover:text-foreground">
             Contact
           </Link>
@@ -87,6 +91,7 @@ export function SiteHeader() {
               >
                 Contact
               </Link>
+              <ThemeToggle className="mt-2" />
               <Button asChild className="mt-2">
                 <Link to="/contact">Book a strategy call</Link>
               </Button>
