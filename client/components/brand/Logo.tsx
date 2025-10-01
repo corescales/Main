@@ -16,7 +16,7 @@ export default function Logo({ className = "h-8 w-8", title = "Corescales" }: { 
   }, []);
 
   return (
-    <span className={cn("inline-flex items-center justify-center", className)} aria-label={title} role="img">
+    <span className={cn("inline-flex items-center justify-center transition-transform hover:rotate-3 active:scale-95", className)} aria-label={title} role="img">
       <img
         src={LOGO_URL}
         alt={title}
