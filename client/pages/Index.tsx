@@ -407,7 +407,7 @@ function ROICalculator() {
           defaultValue={[cr]}
         />
         <SliderRow
-          label="Expected lift with corescales"
+          label="Expected lift with Corescales"
           value={`${lift}%`}
           onChange={(v) => setLift(v[0])}
           min={1}
@@ -520,7 +520,7 @@ function Testimonials() {
         </div>
         <blockquote className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
           <p className="text-lg leading-relaxed">
-            “corescales gave us a Builder‑quality editor, but tailored to our stack and brand system. Our team ships without waiting — and our numbers show it.”
+            “Corescales gave us a Builder‑quality editor, but tailored to our stack and brand system. Our team ships without waiting — and our numbers show it.”
           </p>
           <div className="mt-4 flex items-center gap-3">
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-400 text-white font-semibold">
