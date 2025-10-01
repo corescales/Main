@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Logo({ className = "h-8 w-8", title = "corescales" }: { className?: string; title?: string }) {
+export default function Logo({ className = "h-8 w-8", title = "Corescales" }: { className?: string; title?: string }) {
   return (
     <span
       className={cn(
