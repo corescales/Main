@@ -19,7 +19,7 @@ export function SiteFooter() {
                 <path fill="currentColor" d="M12 2l3.5 6h-7L12 2zm0 20l-3.5-6h7L12 22zM2 12l6-3.5v7L2 12zm20 0l-6 3.5v-7L22 12z" />
               </svg>
             </span>
-            <span className="text-lg font-extrabold tracking-tight">BrandScale</span>
+            <span className="text-lg font-extrabold tracking-tight">corescales</span>
           </div>
           <p className="text-sm text-foreground/70 max-w-sm">
             Builder-style visual editing and experimentation tailored for brand-scaling teams.
@@ -35,7 +35,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60 py-6">
         <div className="container mx-auto flex flex-col items-center justify-between gap-4 text-xs text-foreground/60 md:flex-row">
-          <p>© {new Date().getFullYear()} BrandScale Agency. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} corescales. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link to="#" className="hover:text-foreground">Privacy</Link>
             <Link to="#" className="hover:text-foreground">Terms</Link>

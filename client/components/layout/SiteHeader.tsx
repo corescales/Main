@@ -23,7 +23,7 @@ export function SiteHeader() {
               <path fill="currentColor" d="M12 2l3.5 6h-7L12 2zm0 20l-3.5-6h7L12 22zM2 12l6-3.5v7L2 12zm20 0l-6 3.5v-7L22 12z" />
             </svg>
           </span>
-          <span className="text-lg font-extrabold tracking-tight">BrandScale</span>
+          <span className="text-lg font-extrabold tracking-tight">corescales</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
