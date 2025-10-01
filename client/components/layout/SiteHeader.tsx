@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "@/components/theme/ThemeToggle";
+import Logo from "@/components/brand/Logo";
 
 const nav = [
   { to: "/solutions", label: "Solutions" },
