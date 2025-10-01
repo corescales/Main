@@ -21,7 +21,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <Logo className="h-8 w-8" />
-          <span className="text-lg font-extrabold tracking-tight">corescales</span>
+          <span className="text-lg font-extrabold tracking-tight">Corescales</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
