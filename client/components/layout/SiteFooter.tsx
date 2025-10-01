@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from "@/components/brand/Logo";
 
 const links = [
   { label: "Solutions", to: "/solutions" },
