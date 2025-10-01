@@ -8,8 +8,14 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
   React.useEffect(() => {
     if (typeof document !== "undefined") {
-      const isDark = document.documentElement.classList.contains("dark");
-      setTheme(isDark ? ("dark" as ToasterProps["theme"]) : ("light" as ToasterProps["theme"]));
+      const update = () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        setTheme(isDark ? ("dark" as ToasterProps["theme"]) : ("light" as ToasterProps["theme"]));
+      };
+      update();
+      const obs = new MutationObserver(update);
+      obs.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+      return () => obs.disconnect();
     }
   }, []);
 
