@@ -92,7 +92,7 @@ function LogosMarquee() {
   return (
     <section className="border-t border-b border-border/60 bg-muted/30 py-6">
       <div className="container mx-auto overflow-hidden">
-        <div className="flex animate-[marquee_30s_linear_infinite] gap-12 whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]" style={{"--tw":1} as any}>
+        <div className="flex animate-[marquee_30s_linear_infinite] gap-12 whitespace-nowrap [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           {items.concat(items).map((name, i) => (
             <span key={i} className="text-sm font-semibold tracking-wider text-foreground/60">
               {name}
