@@ -1,24 +1,35 @@
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2F4798ebfdaf864b70b1b930c918009e44?format=webp&width=256";
+
 export default function Logo({ className = "h-8 w-8", title = "Corescales" }: { className?: string; title?: string }) {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const update = () => setIsDark(document.documentElement.classList.contains("dark"));
+    update();
+    const obs = new MutationObserver(update);
+    obs.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <span
-      className={cn(
-        "inline-flex items-center justify-center rounded-md bg-gradient-to-br from-primary to-emerald-400 text-white shadow-sm transition-transform duration-300 motion-safe:animate-pulse",
-        "hover:rotate-3 active:scale-95",
-        className,
-      )}
-      aria-hidden
-    >
-      <svg viewBox="0 0 24 24" className="h-5 w-5" role="img" aria-label={title}>
-        <defs>
-          <linearGradient id="core-g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
-            <stop offset="100%" stopColor="currentColor" stopOpacity="0.9" />
-          </linearGradient>
-        </defs>
-        <path fill="url(#core-g)" d="M12 2l3.5 6h-7L12 2zm0 20l-3.5-6h7L12 22zM2 12l6-3.5v7L2 12zm20 0l-6 3.5v-7L22 12z" />
-      </svg>
+    <span className={cn("inline-flex items-center justify-center", className)} aria-label={title} role="img">
+      <img
+        src={LOGO_URL}
+        alt={title}
+        className={cn(
+          "h-full w-full select-none object-contain",
+          // Try to visually remove the solid background of the source image in both themes
+          // On dark: screen/lighten to knock out dark bg; On light: multiply to suppress light fringing
+          "dark:mix-blend-screen mix-blend-multiply",
+          "brightness-110 contrast-125 saturate-125",
+        )}
+        loading="eager"
+        decoding="async"
+      />
     </span>
   );
 }
