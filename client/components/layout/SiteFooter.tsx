@@ -14,13 +14,7 @@ export function SiteFooter() {
       <div className="container mx-auto grid gap-8 py-12 md:grid-cols-3">
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2F649e3190b5f54c1da388cbe822f4adf7?format=webp&width=128"
-              alt="corescales logo"
-              className="h-8 w-8 rounded-sm object-contain"
-              loading="lazy"
-              decoding="async"
-            />
+            <span className="inline-flex"><svg viewBox="0 0 24 24" className="h-8 w-8 text-white"><path fill="currentColor" d="M12 2l3.5 6h-7L12 2zm0 20l-3.5-6h7L12 22zM2 12l6-3.5v7L2 12zm20 0l-6 3.5v-7L22 12z"/></svg></span>
             <span className="text-lg font-extrabold tracking-tight">corescales</span>
           </div>
           <p className="text-sm text-foreground/70 max-w-sm">
