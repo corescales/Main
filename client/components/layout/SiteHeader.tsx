@@ -20,13 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2F649e3190b5f54c1da388cbe822f4adf7?format=webp&width=128"
-            alt="corescales logo"
-            className="h-8 w-8 rounded-sm object-contain"
-            loading="eager"
-            decoding="async"
-          />
+          <Logo className="h-8 w-8" />
           <span className="text-lg font-extrabold tracking-tight">corescales</span>
         </Link>
 
