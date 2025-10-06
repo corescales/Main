@@ -82,9 +82,9 @@ function Hero() {
             <Button
               size="lg"
               className="px-6"
-              onClick={() => toast.success("We’ll reach out to schedule your strategy call.")}
+              onClick={() => toast.success("We’ll reach out shortly to confirm a time.")}
             >
-              Book a strategy call
+              Get started
             </Button>
             <a
               href="#features"
@@ -547,7 +547,7 @@ function CTA() {
             Ready to scale your brand?
           </h3>
           <p className="mt-2 text-foreground/70">
-            Book a strategy call and we’ll design a plan tailored to your goals.
+            Get started and we’ll design a plan tailored to your goals.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
@@ -555,7 +555,7 @@ function CTA() {
               className="px-6"
               onClick={() => toast("We’ll reach out shortly to confirm a time.")}
             >
-              Book a strategy call
+              Get started
             </Button>
             <a
               href="/pricing"
