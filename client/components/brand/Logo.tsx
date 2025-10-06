@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const LOGO_URL =
-  "https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2F04496da4f364489a9dd23a49d8caa374?format=webp&width=800";
+  "https://cdn.builder.io/api/v1/image/assets%2F36b17fe2710b476d92dae292ec65d57a%2Fe3736108a0b944b3aa3d3c7aa051d12d?format=webp&width=800";
 
 export default function Logo({ className = "h-8 w-8", title = "Corescales" }: { className?: string; title?: string }) {
   useEffect(() => {
