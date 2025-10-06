@@ -47,7 +47,7 @@ export function SiteHeader() {
             Contact
           </Link>
           <Button asChild className="shadow-sm">
-            <Link to="/contact">Book a strategy call</Link>
+            <Link to="/contact">Get started</Link>
           </Button>
         </div>
 
@@ -88,7 +88,7 @@ export function SiteHeader() {
               </Link>
               <ThemeToggle className="mt-2" />
               <Button asChild className="mt-2">
-                <Link to="/contact">Book a strategy call</Link>
+                <Link to="/contact">Get started</Link>
               </Button>
             </nav>
           </div>
