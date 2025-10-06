@@ -59,22 +59,25 @@ export default function Reveal({
     return () => obs.disconnect();
   }, [offset, once, reduced]);
 
-  const dirClass = direction === "up"
-    ? "translate-y-6"
-    : direction === "down"
-    ? "-translate-y-6"
-    : direction === "left"
-    ? "translate-x-6"
-    : direction === "right"
-    ? "-translate-x-6"
-    : "";
+  const dirClass =
+    direction === "up"
+      ? "translate-y-6"
+      : direction === "down"
+        ? "-translate-y-6"
+        : direction === "left"
+          ? "translate-x-6"
+          : direction === "right"
+            ? "-translate-x-6"
+            : "";
 
   return (
     <Comp
       ref={ref}
       className={cn(
         "will-change-transform transition-all ease-out",
-        visible ? "opacity-100 translate-x-0 translate-y-0" : cn("opacity-0", dirClass),
+        visible
+          ? "opacity-100 translate-x-0 translate-y-0"
+          : cn("opacity-0", dirClass),
         className,
       )}
       style={{

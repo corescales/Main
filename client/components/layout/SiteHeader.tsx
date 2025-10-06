@@ -21,7 +21,9 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <Logo className="h-8 w-8" />
-          <span className="text-lg font-extrabold tracking-tight">Corescales</span>
+          <span className="text-lg font-extrabold tracking-tight">
+            Corescales
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -43,7 +45,10 @@ export function SiteHeader() {
 
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link to="/contact" className="text-sm font-medium text-foreground/70 hover:text-foreground">
+          <Link
+            to="/contact"
+            className="text-sm font-medium text-foreground/70 hover:text-foreground"
+          >
             Contact
           </Link>
           <Button asChild className="shadow-sm">

@@ -8,12 +8,19 @@ function applyTheme(theme: "light" | "dark") {
   localStorage.setItem("theme", theme);
 }
 
-export default function ThemeToggle({ className = "" }: { className?: string }) {
+export default function ThemeToggle({
+  className = "",
+}: {
+  className?: string;
+}) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const stored = (localStorage.getItem("theme") as "light" | "dark" | null) ?? null;
-    const initial = stored ?? (document.documentElement.classList.contains("dark") ? "dark" : "light");
+    const stored =
+      (localStorage.getItem("theme") as "light" | "dark" | null) ?? null;
+    const initial =
+      stored ??
+      (document.documentElement.classList.contains("dark") ? "dark" : "light");
     setTheme(initial);
     applyTheme(initial);
   }, []);
@@ -28,7 +35,9 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
     <button
       type="button"
       onClick={toggle}
-      aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+      aria-label={
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      }
       className={`inline-flex h-9 items-center gap-2 rounded-md border border-border/70 bg-background px-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground ${className}`}
     >
       {theme === "dark" ? (
@@ -36,7 +45,9 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       ) : (
         <Moon className="h-4 w-4" />
       )}
-      <span className="hidden sm:inline">{theme === "dark" ? "Light" : "Dark"}</span>
+      <span className="hidden sm:inline">
+        {theme === "dark" ? "Light" : "Dark"}
+      </span>
     </button>
   );
 }

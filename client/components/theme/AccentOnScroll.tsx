@@ -14,7 +14,7 @@ export default function AccentOnScroll() {
     if (mq.matches) return;
 
     const start = { h: 262, s: 83, l: 66 }; // Violet
-    const end = { h: 153, s: 53, l: 49 };   // Emerald
+    const end = { h: 153, s: 53, l: 49 }; // Emerald
 
     let ticking = false;
 

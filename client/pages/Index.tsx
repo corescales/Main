@@ -82,7 +82,9 @@ function Hero() {
           </Reveal>
           <Reveal delayMs={120}>
             <p className="mt-4 text-lg text-foreground/70 sm:text-xl">
-              Builder‑style visual editing tailored for growth teams. Compose blocks, test ideas, and scale your brand without engineering bottlenecks.
+              Builder‑style visual editing tailored for growth teams. Compose
+              blocks, test ideas, and scale your brand without engineering
+              bottlenecks.
             </p>
           </Reveal>
           <Reveal delayMs={180}>
@@ -90,7 +92,9 @@ function Hero() {
               <Button
                 size="lg"
                 className="px-6"
-                onClick={() => toast.success("We’ll reach out shortly to confirm a time.")}
+                onClick={() =>
+                  toast.success("We’ll reach out shortly to confirm a time.")
+                }
               >
                 Get started
               </Button>
@@ -274,17 +278,19 @@ function EditorShowcase() {
             <EditorMock />
           </div>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            {["Drag & drop blocks", "Instant responsive", "Publish with guardrails"].map(
-              (t) => (
-                <div
-                  key={t}
-                  className="flex items-start gap-3 rounded-lg border border-border/60 bg-background p-3 text-sm"
-                >
-                  <Check className="mt-0.5 h-4 w-4 text-primary" />
-                  <span>{t}</span>
-                </div>
-              ),
-            )}
+            {[
+              "Drag & drop blocks",
+              "Instant responsive",
+              "Publish with guardrails",
+            ].map((t) => (
+              <div
+                key={t}
+                className="flex items-start gap-3 rounded-lg border border-border/60 bg-background p-3 text-sm"
+              >
+                <Check className="mt-0.5 h-4 w-4 text-primary" />
+                <span>{t}</span>
+              </div>
+            ))}
           </div>
         </div>
       </Reveal>
@@ -305,7 +311,8 @@ function Interactives() {
             </Reveal>
             <Reveal delayMs={60}>
               <p className="mt-2 text-foreground/70">
-                Explore personas, estimate ROI, and personalize the accent color.
+                Explore personas, estimate ROI, and personalize the accent
+                color.
               </p>
             </Reveal>
           </div>
@@ -406,7 +413,10 @@ function ROICalculator() {
   }, [trafficK, cr, lift, aov]);
 
   return (
-    <div id="roi" className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
+    <div
+      id="roi"
+      className="rounded-xl border border-border/60 bg-card p-6 shadow-sm"
+    >
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold">ROI calculator</h3>
         <span className="text-xs text-foreground/60">Estimates only</span>
@@ -450,7 +460,9 @@ function ROICalculator() {
         />
       </div>
       <div className="mt-6 rounded-lg border border-border/60 bg-background p-4">
-        <div className="text-sm text-foreground/70">Estimated monthly incremental revenue</div>
+        <div className="text-sm text-foreground/70">
+          Estimated monthly incremental revenue
+        </div>
         <div className="mt-1 text-3xl font-extrabold tracking-tight">
           {fmt.format(incrementalRevenue)}
         </div>
@@ -530,24 +542,29 @@ function Testimonials() {
               Results that compound
             </h2>
             <p className="mt-3 text-foreground/70">
-              We partner with marketing and product teams to build a system — not one-off pages — so every launch is faster than the last.
+              We partner with marketing and product teams to build a system —
+              not one-off pages — so every launch is faster than the last.
             </p>
             <div className="mt-6 grid gap-3">
-              {["+38% lift in signup rate", "2x faster campaign velocity", "<200ms First Input Delay"].map(
-                (t) => (
-                  <div key={t} className="flex items-start gap-3 text-sm">
-                    <Check className="mt-0.5 h-4 w-4 text-primary" />
-                    <span>{t}</span>
-                  </div>
-                ),
-              )}
+              {[
+                "+38% lift in signup rate",
+                "2x faster campaign velocity",
+                "<200ms First Input Delay",
+              ].map((t) => (
+                <div key={t} className="flex items-start gap-3 text-sm">
+                  <Check className="mt-0.5 h-4 w-4 text-primary" />
+                  <span>{t}</span>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
         <Reveal delayMs={120}>
           <blockquote className="rounded-xl border border-border/60 bg-card p-6 shadow-sm">
             <p className="text-lg leading-relaxed">
-              “Corescales gave us a Builder‑quality editor, but tailored to our stack and brand system. Our team ships without waiting — and our numbers show it.”
+              “Corescales gave us a Builder‑quality editor, but tailored to our
+              stack and brand system. Our team ships without waiting — and our
+              numbers show it.”
             </p>
             <div className="mt-4 flex items-center gap-3">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-400 text-white font-semibold">
@@ -555,7 +572,9 @@ function Testimonials() {
               </div>
               <div>
                 <div className="font-semibold">Alex Rivera</div>
-                <div className="text-sm text-foreground/60">VP Growth, Lumina</div>
+                <div className="text-sm text-foreground/60">
+                  VP Growth, Lumina
+                </div>
               </div>
             </div>
           </blockquote>
@@ -582,7 +601,9 @@ function CTA() {
               <Button
                 size="lg"
                 className="px-6"
-                onClick={() => toast("We’ll reach out shortly to confirm a time.")}
+                onClick={() =>
+                  toast("We’ll reach out shortly to confirm a time.")
+                }
               >
                 Get started
               </Button>
