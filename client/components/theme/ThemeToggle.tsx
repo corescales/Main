@@ -9,7 +9,7 @@ function applyTheme(theme: "light" | "dark") {
 }
 
 export default function ThemeToggle({ className = "" }: { className?: string }) {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const stored = (localStorage.getItem("theme") as "light" | "dark" | null) ?? null;
